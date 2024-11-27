@@ -1,3 +1,5 @@
+import { handleInputs, displayDogs } from "./dom-handler.js";
+import { fetchBreeds, fetchDogImages } from "./fetch-data.js";
 //1. create an array of 5 person objects, the objhects should contain first name last name, age and job properties, jobb should be a boolean.
 const people = [
   {
@@ -101,58 +103,11 @@ console.table(people[0]);
 // Fetch 4 dogs of the same breed or sub-breed and display them in the DOM
 //feel free to change the ID of the images and/or add css.
 
-//// Fetch a list of available breeds in dog api
 (async () => {
-  try {
-    const response = await fetch(`https://dog.ceo/api/breeds/list/all`);
-    const breeds = await response.json();
-    console.log(breeds.message);
-
-    const list = document.getElementById("inputBreed");
-    for (key in breeds.message) {
-      const breedOption = document.createElement("option");
-      breedOption.value = key;
-      breedOption.textContent = key;
-      list.appendChild(breedOption);
-    }
-    btn.addEventListener("click", () => {
-      if (inputBreed.value && inputAmount.value)
-        displayDogs(inputBreed.value, inputAmount.value);
-      else alert("Breed and amount required");
-    });
-  } catch (error) {
-    throw new Error(error.message);
-  }
+  handleInputs();
+  fetchBreeds();
 })();
-const btn = document.getElementById("display-btn");
-const inputBreed = document.getElementById("inputBreed");
-const inputAmount = document.getElementById("inputAmount");
 
-async function fetchDogImages(breed) {
-  try {
-    const response = await fetch(`https://dog.ceo/api/breed/${breed}/images
-`);
-    const json = await response.json();
-    return json;
-  } catch (error) {
-    throw new Error(error.message);
-  }
-}
-
-async function displayDogs(breed, amount) {
-  if (amount <= 0) alert("Amount can not be less than 1");
-  const imageURLS = await fetchDogImages(breed);
-  const cont = document.getElementById("container");
-  cont.textContent = "";
-  for (let i = 0; i < amount; i++) {
-    const img = document.createElement("img");
-    img.id = `dog${i + 1}`;
-    img.src = imageURLS.message[i];
-    img.alt = `dog of breed ${breed}`;
-    cont.appendChild(img);
-    document;
-  }
-}
 // displayDogs("hound", 4);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
