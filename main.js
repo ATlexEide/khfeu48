@@ -100,6 +100,32 @@ console.table(people[0]);
 // Read the documentation of this dog API: https://dog.ceo/dog-api/documentation/
 // Fetch 4 dogs of the same breed or sub-breed and display them in the DOM
 //feel free to change the ID of the images and/or add css.
+
+(async function getListOfBreeds() {
+  try {
+    const response = await fetch(`https://dog.ceo/api/breeds/list/all`);
+    const breeds = await response.json();
+    console.log(breeds.message);
+
+    const list = document.getElementById("inputBreed");
+    for (key in breeds.message) {
+      const breedOption = document.createElement("option");
+      breedOption.value = key;
+      breedOption.textContent = key;
+      list.appendChild(breedOption);
+    }
+  } catch (error) {
+    throw new Error(error.message);
+  }
+})();
+const btn = document.getElementById("display-btn");
+const inputBreed = document.getElementById("inputBreed");
+const inputAmount = document.getElementById("inputAmount");
+btn.addEventListener("click", () => {
+  if (inputBreed.value && inputAmount.value)
+    displayDogs(inputBreed.value, inputAmount.value);
+  else alert("Breed and amount required");
+});
 async function fetchDogImages(breed) {
   try {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images
