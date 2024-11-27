@@ -115,6 +115,11 @@ console.table(people[0]);
       breedOption.textContent = key;
       list.appendChild(breedOption);
     }
+    btn.addEventListener("click", () => {
+      if (inputBreed.value && inputAmount.value)
+        displayDogs(inputBreed.value, inputAmount.value);
+      else alert("Breed and amount required");
+    });
   } catch (error) {
     throw new Error(error.message);
   }
@@ -122,11 +127,7 @@ console.table(people[0]);
 const btn = document.getElementById("display-btn");
 const inputBreed = document.getElementById("inputBreed");
 const inputAmount = document.getElementById("inputAmount");
-btn.addEventListener("click", () => {
-  if (inputBreed.value && inputAmount.value)
-    displayDogs(inputBreed.value, inputAmount.value);
-  else alert("Breed and amount required");
-});
+
 async function fetchDogImages(breed) {
   try {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images
