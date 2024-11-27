@@ -49,6 +49,7 @@ const people = [
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
+console.log(people[0].first_name, people[0]["last_name"]);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //3. That was tiresome.. just so much typing. Lets write a method to that we never need to that again..
