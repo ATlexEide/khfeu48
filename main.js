@@ -61,9 +61,12 @@ console.log(people[1].fullName);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //4. Its the third person's birthday! And their job status changed. Update their age and job status using dot notation.
-people[2].job = false;
-people[2].age++;
-console.table(people[2]);
+function birthday(person) {
+  person.job ? (person.job = false) : (person.job = true);
+  person.age++;
+  console.table(person);
+}
+birthday(people[2]);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //5. Person three is throwing a giant party! create a function called fotballPubben(). The function should check if the person is over 18, print "party time" if they are and "too young" if they are not. It should also print the name of the person.
