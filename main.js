@@ -1,4 +1,51 @@
 //1. create an array of 5 person objects, the objhects should contain first name last name, age and job properties, jobb should be a boolean.
+const people = [
+  {
+    first_name: "Alexander",
+    last_name: "Eide",
+    get fullName() {
+      return `${this.first_name} ${this.last_name}`;
+    },
+    age: 22,
+    job: false,
+  },
+  {
+    first_name: "Lars",
+    last_name: "Krogsrud",
+    get fullName() {
+      return `${this.first_name} ${this.last_name}`;
+    },
+    age: 999,
+    job: true,
+  },
+  {
+    first_name: "Emil",
+    last_name: "Endresen",
+    get fullName() {
+      return `${this.first_name} ${this.last_name}`;
+    },
+    age: 35,
+    job: true,
+  },
+  {
+    first_name: "Hector",
+    last_name: "Acevedo",
+    get fullName() {
+      return `${this.first_name} ${this.last_name}`;
+    },
+    age: 41,
+    job: true,
+  },
+  {
+    first_name: "Bill",
+    last_name: "Gates",
+    get fullName() {
+      return `${this.first_name} ${this.last_name}`;
+    },
+    age: 69,
+    job: false,
+  },
+];
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
