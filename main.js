@@ -151,10 +151,10 @@ async function displayDogs(breed, amount) {
     document;
   }
 }
-displayDogs("hound", 4);
+// displayDogs("hound", 4);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //BONUS!!
 //create a way for you to change the breed of the dogs displayed on your page
-displayDogs("akita", 4);
+// displayDogs("akita", 4);
 //------------------------------------------------------------------------------------------------------------------------------------------------
