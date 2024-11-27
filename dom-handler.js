@@ -1,5 +1,8 @@
 import { fetchDogImages } from "./fetch-data.js";
-
+document.body.style =
+  "background-color:rebeccapurple; color:white; display:flex; flex-direction:column;";
+document.getElementById("inputs").style =
+  "display:flex; justify-content:center; gap:10px;padding:2em;";
 export function handleInputs() {
   const btn = document.getElementById("display-btn");
   const inputBreed = document.getElementById("inputBreed");
@@ -22,7 +25,7 @@ export async function displayDogs(breed, amount) {
     img.id = `dog${i + 1}`;
     img.src = imageURLS.message[i];
     img.alt = `dog of breed ${breed}`;
-    img.style = `max-width:${cont.offsetWidth / amount};`;
+    img.style = `max-width:${cont.offsetWidth / 4}px;`;
     cont.appendChild(img);
   }
 }
