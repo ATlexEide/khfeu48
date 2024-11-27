@@ -101,7 +101,8 @@ console.table(people[0]);
 // Fetch 4 dogs of the same breed or sub-breed and display them in the DOM
 //feel free to change the ID of the images and/or add css.
 
-(async function getListOfBreeds() {
+//// Fetch a list of available breeds in dog api
+(async () => {
   try {
     const response = await fetch(`https://dog.ceo/api/breeds/list/all`);
     const breeds = await response.json();
