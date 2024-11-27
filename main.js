@@ -138,7 +138,7 @@ async function fetchDogImages(breed) {
 }
 
 async function displayDogs(breed, amount) {
-  if (amount <= 0) throw new Error("Amount can not be less than 1");
+  if (amount <= 0) alert("Amount can not be less than 1");
   const imageURLS = await fetchDogImages(breed);
   const cont = document.getElementById("container");
   cont.textContent = "";
