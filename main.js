@@ -114,12 +114,18 @@ async function fetchDogImages(breed) {
 async function displayDogs(breed, amount) {
   if (amount <= 0) throw new Error("Amount can not be less than 1");
   const imageURLS = await fetchDogImages(breed);
-  console.log(imageURLS.message);
+  const cont = document.getElementById("container");
+  cont.textContent = "";
   for (let i = 0; i < amount; i++) {
-    const img = document.createe;
+    const img = document.createElement("img");
+    img.id = `dog${i + 1}`;
+    img.src = imageURLS.message[i];
+    img.alt = `dog of breed ${breed}`;
+    cont.appendChild(img);
+    document;
   }
 }
-displayDogs("hound");
+displayDogs("hound", 4);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //BONUS!!
