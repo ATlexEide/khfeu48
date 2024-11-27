@@ -55,6 +55,7 @@ console.log(people[0].first_name, people[0]["last_name"]);
 //3. That was tiresome.. just so much typing. Lets write a method to that we never need to that again..
 //create a method in every person object that returns first and last name, call it fullName. This can be done manually for each one or with a loop.
 //Print fullName of the second person in the array by calling the method.
+console.log(people[1].fullName);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //4. Its the third person's birthday! And their job status changed. Update their age and job status using dot notation.
