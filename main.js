@@ -100,6 +100,26 @@ console.table(people[0]);
 // Read the documentation of this dog API: https://dog.ceo/dog-api/documentation/
 // Fetch 4 dogs of the same breed or sub-breed and display them in the DOM
 //feel free to change the ID of the images and/or add css.
+async function fetchDogImages(breed) {
+  try {
+    const response = await fetch(`https://dog.ceo/api/breed/${breed}/images
+`);
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+}
+
+async function displayDogs(breed, amount) {
+  if (amount <= 0) throw new Error("Amount can not be less than 1");
+  const imageURLS = await fetchDogImages(breed);
+  console.log(imageURLS.message);
+  for (let i = 0; i < amount; i++) {
+    const img = document.createe;
+  }
+}
+displayDogs("hound");
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //BONUS!!
