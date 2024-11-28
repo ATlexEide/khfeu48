@@ -97,6 +97,7 @@ fotballPubben(people);
 //6. It's time for school! Create a function called university. It should take in an person object as well as type of degree (bachelors or masters) as arguments.
 // The function should update age and add two properties called "degree" and "student loan". The value of age, degree and student loan should change depending on what degree
 //was passed into the function. Send one person to uni and print the result.
+// Take in a person and type of degree and change persons properties based on degree
 function university(person, degree) {
   switch (degree) {
     case "bachelors":
