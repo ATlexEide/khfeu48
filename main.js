@@ -1,5 +1,5 @@
-import { handleInputs, displayDogs } from "./dom-handler.js";
-import { fetchBreeds, fetchDogImages } from "./fetch-data.js";
+import { handleInputs } from "./dom-handler.js";
+import { fetchBreeds } from "./fetch-data.js";
 //1. create an array of 5 person objects, the objhects should contain first name last name, age and job properties, jobb should be a boolean.
 const people = [
   {
