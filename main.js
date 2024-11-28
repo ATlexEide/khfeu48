@@ -121,6 +121,7 @@ console.table(people[0]);
 // Fetch 4 dogs of the same breed or sub-breed and display them in the DOM
 //feel free to change the ID of the images and/or add css.
 
+// Immediately run imported functions called "handleInputs" and fetchBreeds
 (async () => {
   handleInputs();
   fetchBreeds();

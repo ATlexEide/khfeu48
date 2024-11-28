@@ -1,3 +1,4 @@
+// Fetch a list of breeds to use as valid inputs in select menu
 export async function fetchBreeds() {
   try {
     const response = await fetch(`https://dog.ceo/api/breeds/list/all`);
@@ -15,7 +16,7 @@ export async function fetchBreeds() {
     throw new Error(error.message);
   }
 }
-
+// Takes in an option(breed) from select menu and gets a list of images for said breed via the dog api
 export async function fetchDogImages(breed) {
   try {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`);
