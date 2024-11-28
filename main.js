@@ -75,11 +75,14 @@ birthday(people[2]);
 
 //5. Person three is throwing a giant party! create a function called fotballPubben(). The function should check if the person is over 18, print "party time" if they are and "too young" if they are not. It should also print the name of the person.
 // use a loop to call the function for every person in the array.
+// Take in a person object and check if person is over 18
 function checkAge(person) {
   if (person.age >= 18) console.log(`${person.fullName} // Party Time`);
   else console.log(`${person.fullName} // Too young`);
 }
+// Take in either array of people objects or a single object
 function fotballPubben(input) {
+  // Check if input is single object or array
   if (input.constructor === Array) {
     input.forEach((person) => {
       checkAge(person);
