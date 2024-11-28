@@ -1,6 +1,7 @@
 import { handleInputs } from "./dom-handler.js";
 import { fetchBreeds } from "./fetch-data.js";
 //1. create an array of 5 person objects, the objhects should contain first name last name, age and job properties, jobb should be a boolean.
+// Init array of people object for use in tasks
 const people = [
   {
     first_name: "Alexander",
