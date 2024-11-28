@@ -64,6 +64,7 @@ console.log(people[1].fullName);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //4. Its the third person's birthday! And their job status changed. Update their age and job status using dot notation.
+// Take in a person object and change age and job status, logs person in console when done
 function birthday(person) {
   person.job ? (person.job = false) : (person.job = true);
   person.age++;
